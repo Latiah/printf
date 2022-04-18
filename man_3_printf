@@ -1,0 +1,35 @@
+.\"Manpage for printf function.
+.TH printf 3 "2022-04-18" "1.0" "man page of printf"
+.SH NAME
+printf function
+.SH DESCRIPTION
+printf is a formatting function that is used to print a string to stdout.
+printf command is used to output a given string, number or any other format specifier.. It is defined in the stdio header file.
+
+Here are some format specifiers.
+
+%c -print a single character
+
+%d -print a decimal (base 10) number
+
+%e -print eponential floating-point number
+
+%f -print a floating-point number
+
+%i -prnt an integer in base 10
+
+%o -print a number in octal (base 8)
+
+%s -print a string of characters
+
+%u -print an unsigned decimal (base 10) number
+
+%x -print a number in hexadecimal (base 16)
+
+%% -print a percent sign (\% also works)
+
+.SH BUGS
+Writing the wrong format specifiers that are not included in the stdio header file.
+
+.SH AUTHOR
+Written by AKIMANA Latifah and NIYIKOMEYE Eric
