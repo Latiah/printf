@@ -91,3 +91,4 @@ int print_func(char *s, va_list list, param_func *func);
 int print_left_shift(char *str, param_func *func);
 int _strlen(char *s);
 #endif
+
