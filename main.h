@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 #ifndef PRINT_F
 #define PRINT_F
 
@@ -94,4 +91,3 @@ int print_func(char *s, va_list list, param_func *func);
 int print_left_shift(char *str, param_func *func);
 int _strlen(char *s);
 #endif
->>>>>>> 2c5a6114371a02510c76aeffd9ca756fbdff3a7b
