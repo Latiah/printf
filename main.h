@@ -1,25 +1,37 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdarg.h>
+#include <stdarg.h> /* va_list */
+#include <stdlib.h> /* malloc, free */
+#include <unistd.h> /* write */
 
-int _putchar(char c);
-void _puts(char *str);
+/* helper functions */
+char* (*get_func(char i))(va_list);
+char *create_buffer(void);
+void write_buffer(char *buffer, int len, va_list list);
+char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+
+/* printf functions */
 int _printf(const char *format, ...);
-char *convert_to(char representation[], unsigned int num, int base);
-int function_manager(char c, va_list arg);
-int _switch(char c, va_list arg);
-int print_character(va_list arg);
-int print_sign(va_list arg, int base);
-int print_unsign(va_list arg, int base);
-int print_string(va_list arg);
-int print_ptr(va_list arg);
-int print_rot13(va_list arg);
-int print_rev(va_list arg);
-int print_base16_upper_lower(va_list arg, char *representation);
-int loop_format(va_list arg, const char *string);
-int call_function_manager(char aux, va_list arg);
-int check_percent(int *flag, char aux);
+char *print_s(va_list list);
+char *print_c(va_list list);
+char *print_d(va_list list);
+char *itob(va_list list);
+char *rot13(va_list list);
+char *rev_string(va_list list);
+char *itoOctal(va_list list);
+
+/**
+ * struct types - struct
+ * @id: identifier of type to print (e.g. c means char)
+ * @func: ptr to functions that print according to identifier (e.g. print_c)
+ */
+
+typedef struct types
+{
+	char id;
+	char* (*func)(va_list);
+} print;
 
 #endif
